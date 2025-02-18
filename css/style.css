@@ -1,0 +1,177 @@
+
+@font-face {
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../font/noto-serif-v22-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Noto Serif';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('../font/noto-serif-v22-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Noto Sans Mono';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../font/noto-sans-mono-v30-latin-regular.woff2') format('woff2');
+}
+
+
+body {
+	background: url('../img/bg.webp') #101010;
+	color: white;
+	margin: auto;
+	max-width: 600px;
+	font-family: 'Noto Serif';
+	text-align: center;
+	font-size: 12pt;
+}
+.title, .game-text, .stats, input {
+	font-family: "Noto Sans Mono";
+}
+
+a {
+	color: yellow;
+}
+a:hover {
+	color: orange;
+}
+
+header, footer {
+	padding: 20px 0;
+}
+footer {
+	border-top: 1px solid #444;
+}
+
+.title {
+	font-size: 24pt;
+}
+.title img {
+	vertical-align: middle;
+}
+/* Animation to make the caret in the title look like it's blinking */
+.title-caret {
+	animation: blink 1s infinite;
+	animation-timing-function: linear;
+}
+@keyframes blink {
+	0%   { opacity: 0; }
+	1%   { opacity: 1; }
+	50%  { opacity: 1; }
+	51%  { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+.text-box {
+	background-color: #131313;
+	border: 1px solid #444;
+	border-radius: 20px;
+	padding-bottom: 10px;
+}
+
+#text-title img {
+	height: 20px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.game-text {
+	text-align: left;
+	line-height: 1.6;
+	padding: 5px;
+	font-size: 13pt;
+}
+
+/* Create a 1px invisible border to allow for the caret to be placed as a border */
+.game-text span {
+	border-left: 1px solid rgba(0,0,0,0);
+	letter-spacing: -1px;
+}
+.caret {
+	text-decoration: underline;
+	border-left: 1px solid white !important;
+}
+
+.highlight {
+	color: #8f8f8f;
+}
+.incorrect {
+	color: red;
+}
+.green {
+	color: greenyellow;
+}
+
+.incorrect-input {
+	background-color: red !important;
+}
+
+#typeinput {
+	width: 420px;
+	text-align: center;
+}
+
+select, input[type=text] {
+	background-color: #111;
+	border: 1px solid #444;
+	color: white;
+	padding: 7px;
+	font-size: 12pt;
+}
+select:hover {
+	background-color: #0c0c0c;
+}
+select:active {
+	background-color: #040404;
+}
+
+#btn-toggleplay {
+	border: 0;
+	padding: 5px;
+	background-color: unset;
+}
+#btn-toggleplay:hover {
+	filter: brightness(0.75);
+}
+
+select:disabled {
+	background-color: #131313;
+	color: #aaa;
+}
+
+/* Hide "Type here" when input field is focused */
+input:focus::placeholder {
+	color: transparent;
+}
+
+.stat {
+	font-weight: bolder;
+}
+
+/* Two columns that collapse on mobile */
+.two-columns {
+	display: block;
+}
+.two-columns .column {
+	margin: 15px auto;
+	padding: 6px;
+}
+@media only screen and (min-width: 1024px) {
+	.two-columns {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		margin-bottom: 20px;
+	}
+	.two-columns .column {
+		margin: 0;
+	}
+}

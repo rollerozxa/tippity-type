@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TippityType_</title>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/main.js" defer></script>
+
+	<!--<link rel="icon" href="img/icon-256.webp" sizes="256x256">-->
+</head>
+<body>
+	<noscript>
+		<p>
+			(TippityType requires JavaScript to be enabled!
+			Please enable JavaScript in your browser.
+			You can view the source of the JavaScript code that will
+			get executed in your browser <a href="js/main.js">here</a>.)
+		</p>
+	</noscript>
+
+	<header>
+		<span class="title">
+			<!--<img src="img/keyboard.webp" height="64" alt="Logo">-->
+			>TippityType<span class="title-caret">_</span>
+		</span>
+	</header>
+
+	<main>
+		<div class="two-columns">
+			<div class="column">
+				<label>
+					<input type="checkbox" id="ignore-casing" name="ignore-casing" value="yes">
+					Ignore casing
+				</label>
+			</div>
+			<div class="column">
+				<label>
+					Choose text:<br>
+					<select id="text-select"></select>
+				</label>
+			</div>
+		</div>
+
+		<div class="text-box">
+			<h2 id="text-title">[Text title]</h2>
+
+			<p id="text-author">[Text author]</p>
+
+			<div class="game-text" id="text-content">
+				[Text content]
+			</div>
+		</div>
+
+		<p>
+			<input id="typeinput" type="text" placeholder="" disabled>
+		</p>
+
+		<p>
+			<button id="btn-toggleplay"><img src="img/play.svg" alt="Play/Stop" width="32"></button>
+		</p>
+
+		<div class="stats">
+			<p>
+						Gross WPM: <span class="stat" id="st-grosswpm">N/A</span>
+				&ndash; Accuracy: <span class="stat" id="st-accuracy">N/A</span> %
+				&ndash; Net WPM: <span class="stat" id="st-netwpm">N/A</span>
+				&ndash; Errors: <span class="stat" id="st-errors">N/A</span>
+			</p>
+		</div>
+
+	</main>
+
+	<footer>
+		Copyright &copy; 2023-2024 <a href="https://voxelmanip.se/">ROllerozxa</a>
+	</footer>
+</body>
+</html>
